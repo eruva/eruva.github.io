@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://www.eruva.com
+title: Eruva
+subtitle: good software by good people
+author: Jon
 simple_search: http://google.com/search
 description:
 
