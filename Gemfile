@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
+gem "thin"
+
 group :development do
   gem 'rake', '~> 0.9.2'
   gem 'rack', '~> 1.4.1'
