@@ -1,3 +1,10 @@
+$header-bg: #086CA2;
+$subtitle-color: lighten($header-bg, 58);
+$nav-bg: desaturate(lighten(#FFA100, 18), 5);
+$sidebar-bg: desaturate(#64AAD0, 8);
+$sidebar-link-color: saturate(#FF6F00, 10);
+$sidebar-link-color-hover: darken(#FFB073, 9);
+
 // Here you can easily change your sites's color scheme.
 // To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
 // If you need a handy color picker try http://hslpicker.com
@@ -10,9 +17,9 @@
 //$sidebar-bg: desaturate(#eceff5, 8);
 //$sidebar-link-color: saturate(#526f9a, 10);
 //$sidebar-link-color-hover: darken(#7ab662, 9);
-//$footer-bg: #ccc !default;
-//$footer-bg-front: image-url('noise.png');
-//$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
+$footer-bg: #034569 !default;
+$footer-bg-front: image-url('noise.png');
+$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
 
 
 /* To use the light Solarized highlighting theme uncomment the following line */
