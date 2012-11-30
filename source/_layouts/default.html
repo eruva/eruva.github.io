@@ -9,6 +9,7 @@
       {{ content | expand_urls: root_url }}
     </div>
 
+  {% if page.url != "/contact/index.html" %}
     <div class="container_12">
       <div class="grid_12">
         <img src="/images/wheel_divider.png" />
@@ -25,6 +26,7 @@
       </div>
     </div>
   </div>
+{% endif %}
 
   <footer id="footer">{% include footer.html %}</footer>
   {% include after_footer.html %}
