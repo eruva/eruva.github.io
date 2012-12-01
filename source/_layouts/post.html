@@ -3,41 +3,51 @@ layout: default
 single: true
 ---
 
-<div>
-<article class="hentry" role="article">
-  {% include article.html %}
-  <footer>
-    <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
-    </p>
-    {% unless page.sharing == false %}
-      {% include post/sharing.html %}
-    {% endunless %}
-    <p class="meta">
-      {% if page.previous.url %}
-        <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-      {% endif %}
-      {% if page.next.url %}
-        <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
-      {% endif %}
-    </p>
-  </footer>
-</article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
+<div id="masthead-blog">
+  <div class="container_12">
+    <div class="grid_6 content">
+      <h1>News and Updates</h1>
+      <p>
+          No matter what your online project demands, whether it's an unforgettable user interface, a unique design,
+          or a rich Internet application; your launch is our mission!
+      </p>
+      <img src="/images/surface_sub.png" class="surface-sub" />
+    </div>
+    <div class="grid_5 suffix_1">
+      <img src="/images/blog_boat.png" class="little-boat" />
+    </div>
+  </div>
+  <div class="waves">&nbsp;</div>
 </div>
-{% unless page.sidebar == false %}
-<aside class="sidebar">
-  {% if site.post_asides.size %}
-    {% include_array post_asides %}
-  {% else %}
-    {% include_array default_asides %}
+
+<div id="blog">
+  <div class="container_12">
+  <article class="hentry" role="article">
+    {% include article.html %}
+    <footer>
+      <p class="meta">
+        {% include post/author.html %}
+        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+        {% include post/categories.html %}
+      </p>
+      {% unless page.sharing == false %}
+        {% include post/sharing.html %}
+      {% endunless %}
+      <p class="meta">
+        {% if page.previous.url %}
+          <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+        {% if page.next.url %}
+          <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
+        {% endif %}
+      </p>
+    </footer>
+  </article>
+  {% if site.disqus_short_name and page.comments == true %}
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+    </section>
   {% endif %}
-</aside>
-{% endunless %}
+  </div>
+</div>

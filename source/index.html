@@ -25,27 +25,16 @@ layout: default
     <div class="grid_5 suffix_1">
       <div class="sub_header">
         <h3>From Our Blog</h3>
-        <div class="blog-short">
-          <span class="date">08</span>
-          <span class="title">August 2008</span>
+        {% assign index = true %}
+        {% for post in paginator.posts %}
+          <div class="blog-short">
+          <span class="date">{{ post.date | date: "%d %b" }}</span>
+          <span class="title"><a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a></span>
           <div class="short-content">
-            Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
+            {{ post.content | excerpt }}
           </div>
         </div>
-        <div class="blog-short">
-          <span class="date">08</span>
-          <span class="title">August 2008</span>
-          <div class="short-content">
-            Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
-          </div>
-        </div>
-        <div class="blog-short">
-          <span class="date">08</span>
-          <span class="title">August 2008</span>
-          <div class="short-content">
-            Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
 
