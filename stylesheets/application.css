@@ -1123,6 +1123,7 @@ a:hover {
 .customer-quote blockquote {
   padding-top: 5px;
   font-style: italic;
+  font-size: 14px;
 }
 
 /* line 1, ../sass/partials/_contact.sass */
