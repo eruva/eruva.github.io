@@ -1,2 +1,3 @@
 name: Eruva
 pygments: true
+markdown: kramdown
