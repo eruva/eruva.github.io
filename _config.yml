@@ -1,3 +1,4 @@
 name: Eruva
 markdown: kramdown
 highlighter: rouge
+permalink: pretty
